@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import styled from 'styled-components'
+import ContactListComponent from './components/ContactListComponents';
+import ConversationComponent from './components/ConversationComponents';
 
+const Container = styled.div`
+display : flex;
+flex-direction: row;
+height: 100vh;
+width: 100%;
+background: #f8f9fb;
+`
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  return <Container>
+    <ContactListComponent />
+    <ConversationComponent />
+  </Container>
 }
 
 export default App;
